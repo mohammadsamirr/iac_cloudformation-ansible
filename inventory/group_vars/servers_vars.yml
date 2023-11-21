@@ -1,0 +1,40 @@
+---
+
+#Override default image
+#aws_image: "{{ aws_image}}"
+
+#   Cloud Formation Stack Name
+stack_name: "test_Linux_ops"
+
+# SSH Keypair for the instance
+#aws_key_name: "ansiblekey"
+
+#Establish server hostname
+server_name: "server01.cxloyalty.com"
+server_name2: "server02.cxloyalty.com"
+
+#Type of AWS instance
+aws_instancetype: "t2.micro"
+
+#Establish  server subnets
+subnet: subnet-04629c3e3173d0b91
+subnet2: subnet-00af56ec99dfc5cfe
+
+# Establish EBS Encryption key
+#ebs_key: "ff01e1f8-edfa-44d6-b511-3fc07445765c"
+
+
+# Establish private Route53 DNS zone
+private_hosted_zone: Z07758852XXD5Y77JNI67
+
+# Establish VPC
+vpc_id: vpc-09ecdc9d431243323
+
+#Disks to attach to instance
+disks:
+  - name: "root_volume"
+    type: "gp2"
+    size: "15"
+    device_name: "/dev/sda1"
+
+
